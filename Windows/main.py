@@ -1,5 +1,5 @@
 import tkinter as tk
-import macos_functions as macfc
+from MacOS import macos_functions as macfc
 
 root = tk.Tk()
 root.title("PyManage")

@@ -1,5 +1,5 @@
 import tkinter as tk
-import macos_functions as macfc
+import windows_functions as winfc
 
 root = tk.Tk()
 root.title("PyManage")
@@ -8,7 +8,7 @@ root.geometry("1280x720")
 
 menubar = tk.Menu(root)
 filemenu = tk.Menu(menubar, tearoff=0)
-filemenu.add_command(label="Open", command=macfc.btn_nothing)
+filemenu.add_command(label="Open", command=winfc.btn_nothing)
 filemenu.add_separator()
 filemenu.add_command(label="Exit", command=root.quit)
 menubar.add_cascade(label="File", menu=filemenu)
@@ -28,7 +28,7 @@ class App:
     button = tk.Button(
         master=frame,
         text="DNS_Home",
-        command=macfc.btn_dns_settings_home,
+        command=winfc.btn_dns_settings_home,
         height=5,
         width=25,
         bg="#808080"
@@ -37,7 +37,7 @@ class App:
     button2 = tk.Button(
         master=frame,
         text="DNS_Out",
-        command=macfc.btn_dns_settings_out,
+        command=winfc.btn_dns_settings_out,
         height=5,
         width=25,
         background="#808080"
