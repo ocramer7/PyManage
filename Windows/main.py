@@ -1,7 +1,8 @@
 import tkinter as tk
 import macos_functions as macfc
 
-root = tk.Tk(className='PyManage')
+root = tk.Tk()
+root.title("PyManage")
 frame = tk.Frame()
 root.geometry("1280x720")
 
