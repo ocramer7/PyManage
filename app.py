@@ -1,15 +1,16 @@
 import tkinter as tk
-from MacOS import macos_functions as macfc
+import macos_functions as macfc
 
 root = tk.Tk(className='PyManage')
 frame = tk.Frame()
 root.geometry("1280x720")
 
 
-class App():
-    def handle_click(event):
-        print("The button was clicked!")
+def handle_click():
+    print("The button was clicked!")
 
+
+class App:
     button = tk.Button(
         master=frame,
         text="DNS_Home",
@@ -28,7 +29,7 @@ class App():
         background="#808080"
     )
     button.bind("<Button-1>", handle_click)
-    button2.bind("<Button-2>", handle_click)
+    button2.bind("<Button-1>", handle_click)
 
     button.pack()
     button2.pack()

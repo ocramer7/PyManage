@@ -2,34 +2,34 @@ from tkinter import *
 import urllib
 
 
-def updateCheck(self):
+def update_check(self):
     update = False
 
-    updateWindow = Toplevel()
-    updateWindow.title(string="Update Checker")
-    updateWindow.resizable(False, False)
+    update_window = Toplevel()
+    update_window.title(string="Update Checker")
+    update_window.resizable(False, False)
 
     # Gets downloaded version
-    versionSource = open('version.txt', 'r')
-    versionContents = versionSource.read()
+    version_source = open('version.txt', 'r')
+    version_contents = version_source.read()
 
     # gets newest version
-    updateSource = urllib.urlopen("http://www.suturesoft.com/Updates/craftbook.txt")
-    updateContents = updateSource.read()
+    update_source = urllib.urlopen("http://www.suturesoft.com/Updates/craftbook.txt")
+    update_contents = update_source.read()
 
     # checks for updates
     for i in range(0, 20):
-        if updateContents[i] != versionContents[i]:
-            dataLabel = Label(updateWindow, text="\n\nThere are data updates availible.\n\n")
+        if update_contents[i] != version_contents[i]:
+            dataLabel = Label(update_window, text="\n\nThere are data updates availible.\n\n")
             dataLabel.pack()
             update = True
             break
     for i in range(22, 42):
-        if updateContents[i] != versionContents[i]:
-            versionLabel = Label(updateWindow, text="\n\nThere are version updates availible.\n\n")
+        if update_contents[i] != version_contents[i]:
+            versionLabel = Label(update_window, text="\n\nThere are version updates availible.\n\n")
             versionLabel.pack()
             update = True
             break
-    if update == False:
-        versionLabel = Label(updateWindow, text="\n\nYou are already running the most up to date version.\n\n")
+    if not update:
+        versionLabel = Label(update_window, text="\n\nYou are already running the most up to date version.\n\n")
         versionLabel.pack()

@@ -7,8 +7,8 @@ dnsIP = "192.168.1.205"
 def btn_dns_settings_home():
     # os.system("dnshome")
     os.system("networksetup -setdnsservers Wi-Fi " + dnsIP)  # RPi DNS server
+    # Windows: os.system('netsh interface ip set dns "Local Area Connection" static 192.168.0.200')
     os.system("echo Setting home DNS server")
-    os.system("echo")
 
     messagebox.showinfo("showinfo", "Setting home DNS Server to: " + dnsIP)
 
