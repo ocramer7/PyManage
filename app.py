@@ -6,11 +6,24 @@ root.title("PyManage")
 frame = tk.Frame()
 root.geometry("1280x720")
 
+menubar = tk.Menu(root)
+filemenu = tk.Menu(menubar, tearoff=0)
+filemenu.add_command(label="Open", command=macfc.btn_nothing)
+filemenu.add_separator()
+filemenu.add_command(label="Exit", command=root.quit)
+menubar.add_cascade(label="File", menu=filemenu)
+
 
 class App:
 
     def handle_click(self):
         print("The button was clicked!")
+
+
+    label = tk.Label(
+        master=frame,
+        text="DNS Server Set:"
+    )
 
     button = tk.Button(
         master=frame,
@@ -32,11 +45,13 @@ class App:
     button.bind("<Button-1>", handle_click)
     button2.bind("<Button-1>", handle_click)
 
-    button.pack()
+    label.pack(side=tk.TOP)
+    button.pack(side=tk.LEFT)
     button2.pack()
 
-    frame.pack()
+    frame.place(x=720, y=10)
 
+    root.config(menu=menubar)
     root.mainloop()
 
 

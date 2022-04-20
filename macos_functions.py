@@ -17,3 +17,7 @@ def btn_dns_settings_out():
     os.system("echo Clearing custom DNS settings")
 
     messagebox.showinfo("Info", "Clearing custom DNS settings!")
+
+
+def btn_nothing():
+    messagebox.showinfo("showinfo", "Button does nothing...")
