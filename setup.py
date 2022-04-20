@@ -17,8 +17,8 @@ OPTIONS = {
         'CFBundleDisplayName': APP_NAME,
         'CFBundleGetInfoString': "Making Sandwiches",
         'CFBundleIdentifier': "com.metachris.osx.sandwich",
-        'CFBundleVersion': "0.0.1-alpha",
-        'CFBundleShortVersionString': "0.0.1-alpha",
+        'CFBundleVersion': "0.0.2-alpha",
+        'CFBundleShortVersionString': "0.0.2-alpha",
         'NSHumanReadableCopyright': u"Copyright © 2022, Owen Cramer, All Rights Reserved"
     }
 }
